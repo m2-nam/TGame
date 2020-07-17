@@ -5,6 +5,10 @@
  */
 package juegotesting;
 
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author JAMES
@@ -16,6 +20,10 @@ public class PrimeraEtapa extends javax.swing.JFrame {
      */
     public PrimeraEtapa() {
         initComponents();
+        
+        ImageIcon  pic1 = new ImageIcon(getClass().getResource("/pix/First_fase.png"));
+        Icon icon1 = new ImageIcon(pic1.getImage().getScaledInstance(lbl1.getWidth() ,lbl1.getHeight(), Image.SCALE_SMOOTH));
+        lbl1.setIcon(icon1);
     }
 
     /**
@@ -27,13 +35,22 @@ public class PrimeraEtapa extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         Ducha = new javax.swing.JButton();
         Mochila = new javax.swing.JButton();
         CorrerClases = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        lbl1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setFont(new java.awt.Font("Sitka Small", 0, 12)); // NOI18N
+        jLabel1.setText("Buenas días, ¡apurate tienes que ir a la escuela!");
+
+        Ducha.setBackground(new java.awt.Color(255, 255, 255));
+        Ducha.setFont(new java.awt.Font("Sitka Small", 0, 12)); // NOI18N
         Ducha.setText("Tomar ducha");
         Ducha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -41,6 +58,8 @@ public class PrimeraEtapa extends javax.swing.JFrame {
             }
         });
 
+        Mochila.setBackground(new java.awt.Color(255, 255, 255));
+        Mochila.setFont(new java.awt.Font("Sitka Small", 0, 12)); // NOI18N
         Mochila.setText("Alistar la mochila");
         Mochila.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -48,6 +67,8 @@ public class PrimeraEtapa extends javax.swing.JFrame {
             }
         });
 
+        CorrerClases.setBackground(new java.awt.Color(255, 255, 255));
+        CorrerClases.setFont(new java.awt.Font("Sitka Small", 0, 12)); // NOI18N
         CorrerClases.setText("Agarrar todo e ir corriendo a clases");
         CorrerClases.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -55,40 +76,55 @@ public class PrimeraEtapa extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Buenas días, ¡apurate tienes que ir a la escuela!");
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(Ducha)
+                        .addGap(18, 18, 18)
+                        .addComponent(Mochila)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(CorrerClases))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(122, 122, 122)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(163, 163, 163)
+                        .addComponent(lbl1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbl1, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
+                .addGap(23, 23, 23)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Ducha)
+                    .addComponent(Mochila)
+                    .addComponent(CorrerClases))
+                .addGap(29, 29, 29))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(Ducha)
-                        .addGap(18, 18, 18)
-                        .addComponent(Mochila)
-                        .addGap(18, 18, 18)
-                        .addComponent(CorrerClases))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(110, 110, 110)
-                        .addComponent(jLabel1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(188, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Ducha)
-                    .addComponent(Mochila)
-                    .addComponent(CorrerClases))
-                .addGap(57, 57, 57))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void DuchaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DuchaActionPerformed
@@ -149,5 +185,7 @@ public class PrimeraEtapa extends javax.swing.JFrame {
     private javax.swing.JButton Ducha;
     private javax.swing.JButton Mochila;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lbl1;
     // End of variables declaration//GEN-END:variables
 }
